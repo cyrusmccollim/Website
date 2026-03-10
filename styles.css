@@ -12,6 +12,8 @@
   --font-body: 'DM Sans', sans-serif;
   --radius: 16px;
   --gap: 16px;
+  --green: rgba(58, 178, 117);
+  --purple: rgba(141, 119, 255);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -106,9 +108,14 @@ ul { list-style: none; }
   position: relative;
   z-index: 10;
 }
-.area-proj-1:hover, .area-proj-2:hover {
+.area-proj-2:hover {
   border-color: rgba(96, 165, 250, 0.5);
   background: linear-gradient(160deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+}
+
+.area-proj-1:hover {
+  border-color: rgba(141, 119, 255, 0.6);
+
 }
 
 .profile-img {
@@ -198,6 +205,9 @@ p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight:
   font-weight: 500;
 }
 .cell:hover .tag { border-color: rgba(96, 165, 250, 0.2); color: var(--text-main); }
+.area-proj-1:hover .tag {
+  border-color: rgba(141, 119, 255, 0.4); 
+}
 
 .btn {
   display: inline-flex;
@@ -585,3 +595,22 @@ p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight:
 .icon-link[href*="github"] svg {
   transform: scale(1.15);
 }
+
+.purple {
+  color: var(--purple);
+  text-decoration-color: var(--purple);
+}
+.purple:hover {
+  color: var(--purple);
+  text-decoration-color: var(--purple);
+}
+
+.green {
+  color: var(--green);
+  text-decoration-color: var(--green);
+}
+.green:hover {
+  color: var(--green);
+  text-decoration-color: var(--green);
+}
+
