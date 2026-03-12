@@ -181,7 +181,7 @@ h1 {
 h2 { font-size: clamp(1.4rem, 2vw, 1.75rem); margin-bottom: 12px; color: var(--text-main); line-height: 1.1; }
 h3 { font-size: 1.15rem; font-weight: 500; font-family: var(--font-body); letter-spacing: -0.01em; color: var(--text-main); }
 
-p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight: 400; margin-bottom: 0; }
+p { font-size: 1.00rem; line-height: 1.5; color: var(--text-muted); font-weight: 400; margin-bottom: 0; }
 .label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -259,7 +259,7 @@ p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight:
 
 .area-exp {
   grid-column: 7 / 10;
-  grid-row: 1 / 5;
+  grid-row: 5 / 8;
   display: flex;
   flex-direction: column;
 }
@@ -316,7 +316,7 @@ p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight:
 
 .area-edu {
   grid-column: 7 / 10;
-  grid-row: 5 / 8;
+  grid-row: 1 / 5;
   display: flex;
   flex-direction: column;
 }
@@ -353,8 +353,8 @@ p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight:
   .area-about   { order: 2; }
   .area-proj-1  { order: 3; }
   .area-proj-2  { order: 4; }
-  .area-edu     { order: 5; }
-  .area-exp     { order: 6; }
+  .area-exp     { order: 5; }
+  .area-edu     { order: 6; }
   .area-skills  { order: 7; }
   .area-time    { order: 8; }
   .area-contact { order: 9; }
@@ -449,7 +449,7 @@ p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight:
 }
 
 .about-text {
-  font-size: 0.95rem;
+  font-size: 0.90rem;
   margin-bottom: 15px;
 }
 
@@ -489,6 +489,61 @@ p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight:
   color: var(--text-faint);
 }
 
+.edu-orgs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.edu-org-tag {
+  background: rgba(141, 119, 255, 0.1);
+  color: var(--purple);
+  border-color: rgba(141, 119, 255, 0.25) !important;
+}
+
+.edu-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 10px 0 8px;
+}
+
+.edu-section-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+
+.edu-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edu-proj-item {
+  padding-left: 10px;
+  border-left: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.edu-proj-title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 3px;
+}
+
+.edu-proj-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
 .contact-label {
   color: rgba(0,0,0,0.5);
 }
@@ -521,6 +576,9 @@ p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight:
   }
 
   #grid {
+    aspect-ratio: 1300 / 800;
+    max-height: calc(100vh - 40px);
+    grid-template-rows: 3fr 3fr 2fr 4fr 4fr 4fr 4fr;
     grid-auto-rows: minmax(70px, auto);
     gap: var(--gap);
     max-width: 1200px;
@@ -550,6 +608,11 @@ p { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); font-weight:
   .proj-phone-img { width: 120px; }
 
   .edu-footer { margin-top: 10px; }
+  .edu-orgs { margin-top: 8px; }
+  .edu-divider { margin: 8px 0 6px; }
+  .edu-section-label { margin-bottom: 6px; margin-top: 15px; }
+  .edu-projects { gap: 6px; }
+  .edu-proj-desc { font-size: 0.7rem; }
 }
 
 @media (min-width: 1600px) {
