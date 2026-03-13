@@ -338,7 +338,7 @@ p { font-size: 1.00rem; line-height: 1.5; color: var(--text-muted); font-weight:
 .exp-company { color: var(--accent); margin-bottom: 4px; display: block; font-size: 0.85rem; }
 .exp-date { font-size: 0.75rem; color: var(--text-faint); margin-bottom: 6px; display: block; }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (orientation: portrait) {
   #grid {
     display: flex;
     flex-direction: column;
@@ -560,24 +560,24 @@ p { font-size: 1.00rem; line-height: 1.5; color: var(--text-muted); font-weight:
   margin-bottom: 16px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) and (orientation: landscape) {
   :root {
-    --gap: 12px;
-    --radius: 14px;
+    --gap: clamp(7px, 0.9vw, 12px);
+    --radius: clamp(10px, 1vw, 14px);
   }
 
   html {
-    font-size: 14.5px;
+    font-size: clamp(10px, 1.2vw, 14.5px);
   }
 
   #layout-container {
-    padding: 20px;
+    padding: clamp(12px, 1.5vh, 20px) clamp(16px, 3vw, 40px);
     height: 100vh;
   }
 
   #grid {
     aspect-ratio: 1300 / 800;
-    max-height: calc(100vh - 40px);
+    max-height: calc(100vh - clamp(24px, 3vh, 40px));
     grid-template-rows: 3fr 3fr 2fr 4fr 4fr 4fr 4fr;
     grid-auto-rows: minmax(70px, auto);
     gap: var(--gap);
@@ -585,27 +585,33 @@ p { font-size: 1.00rem; line-height: 1.5; color: var(--text-muted); font-weight:
   }
 
   .cell {
-    padding: 16px 20px;
+    padding: clamp(10px, 1.2vw, 16px) clamp(12px, 1.5vw, 20px);
+    overflow: hidden;
   }
 
-  h1 { font-size: 2.5rem; margin-bottom: 6px; }
+  h1 { font-size: clamp(1.6rem, 2.8vw, 2.5rem); margin-bottom: 6px; }
   h2 { font-size: 1.4rem; margin-bottom: 8px; }  .label { margin-bottom: 10px; font-size: 0.7rem; }
   p { line-height: 1.4; margin-bottom: 6px; }
+
+  .area-proj-1 { overflow: visible; clip-path: inset(0 -200px 0 0); }
 
   .intro-top { margin-bottom: 12px; }
   .intro-desc { margin-bottom: 12px; margin-top: 6px; }
   .intro-actions { gap: 8px; }
   .btn { padding: 8px 16px; font-size: 0.9rem; }
 
-  .clock-display { font-size: 3.5rem; margin-top: 4px; }
-  .location-main { font-size: 1.4rem; margin-bottom: 6px; }
+  .clock-display { font-size: clamp(1.8rem, 3.2vw, 3.5rem); margin-top: 4px; }
+  .location-main { font-size: clamp(1rem, 1.3vw, 1.4rem); margin-bottom: 6px; }
 
   .exp-item { margin-bottom: 14px; padding-left: 12px; }
   .exp-company { margin-bottom: 2px; }
   .exp-date { margin-bottom: 4px; }
 
-  .proj-img-container { width: 170px; right: -45px; }
-  .proj-phone-img { width: 120px; }
+  .profile-img,
+  .profile-img img { width: clamp(40px, 5vw, 70px); height: clamp(40px, 5vw, 70px); }
+
+  .proj-img-container { width: clamp(100px, 13vw, 170px); right: clamp(-30px, -3.5vw, -10px); }
+  .proj-phone-img { width: clamp(70px, 9vw, 120px); }
 
   .edu-footer { margin-top: 10px; }
   .edu-orgs { margin-top: 8px; }
@@ -615,7 +621,7 @@ p { font-size: 1.00rem; line-height: 1.5; color: var(--text-muted); font-weight:
   .edu-proj-desc { font-size: 0.7rem; }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1600px) and (orientation: landscape) {
   :root {
     --gap: 15px;
     --radius: 18px;
