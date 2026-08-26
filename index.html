@@ -18,10 +18,6 @@
 <body>
 
   <div class="layout">
-    
-    <nav>
-      <div><span class="logo-slash">//</span> CM</div>
-    </nav>
 
     <main style="display: flex; flex-direction: column; gap: 64px;">
       
@@ -35,17 +31,17 @@
         </div>
         -->
         
-        <h1>I'm <span class="highlight">Cyrus McCollim,</span></h1>
+        <h1>I'm <span class="highlight">Cyrus,</span></h1>
         
         <p class="hero-desc">
           A computer science student based in Baltimore, MD. <br>
-          I am passionate about data, design, and software.
+          I'm interested in data, design, and software.
         </p>
         
         <div class="actions">
-          <a href="mailto:contact@cyrusmccollim.dev" class="btn btn-primary">
+          <a href="#" onclick="event.preventDefault(); navigator.clipboard.writeText('dev@cyrusmccollim.com'); const span = this.querySelector('span'); span.innerText = 'Copied!'; setTimeout(() => span.innerText = 'Email', 2000);" class="btn btn-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Email
+            <span>Email</span>
           </a>
           <a href="./files/Resume%20-%20Cyrus%20McCollim.pdf" target="_blank" class="btn btn-secondary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -57,16 +53,16 @@
       <section>
         <h2 class="section-title">About Me</h2>
         <p class="about-text">
-          My technical background spans low-level programming, mobile app development, and robotics. I generally enjoy building things that are useful, interesting, and feel great to use. I'm currently working on <a href="https://github.com/cyrusmccollim/OrganicReader" target="_blank">OrganicReader</a>, a mobile TTS app using natural voices with a distraction-free experience.
+          My technical experience ranges from low-level programming and robotics to application development. Ultimately, I enjoy working on software that's technically interesting, feels great in the user's hands, and serves a useful purpose.
         </p>
         <p class="about-text" style="margin-top: 8px;">
-          When I'm not writing code, I spend my time composing piano and orchestral music. You can have a listen <a href="https://www.cyrusmccollim.music" target="_blank">here</a>.
+          When I'm not writing code, I spend my time composing piano and orchestral music. You can have a listen to that <a href="https://music.cyrusmccollim.com" target="_blank">here</a>.
         </p>
       </section>
 
       <section>
         <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">A selection of the projects I'm most proud of:</p>
+        <p class="section-subtitle">A selection of recent projects I'm proud of:</p>
         
         <div class="projects-grid">
           
@@ -118,11 +114,11 @@
       
         <div class="list-item">
           <div class="list-header">
-            <span class="list-title">Bachelor's of Science in Computer Science</span>
+            <span class="list-title">Bachelor of Science in Computer Science</span>
             <span class="list-date">Class of 2027</span>
           </div>
           <span class="list-company">Loyola University Maryland</span>
-          <p class="list-desc">Involved in Robotics Club and Hyman Science Scholars.</p>
+          <p class="list-desc">Involved in Robotics Club, Competitive Programming, and Hyman Science Scholars.</p>
         </div>
       </section>
 
@@ -134,6 +130,9 @@
           <span class="tag">C/C++</span>
           <span class="tag">JavaScript</span>
           <span class="tag">TypeScript</span>
+          <span class="tag">Spring</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Thymeleaf</span>
           <span class="tag">React</span>
           <span class="tag">React Native</span>
           <span class="tag">SQL</span>
@@ -158,8 +157,8 @@
       </section>
 
       <section>
-        <h2 class="section-title">Get in touch</h2>
-        <a href="#" class="contact-email" onclick="event.preventDefault(); navigator.clipboard.writeText('contact@cyrusmccollim.dev'); const el = this; el.textContent = 'Copied!'; setTimeout(() => el.textContent = 'contact@cyrusmccollim.dev', 2000);">contact@cyrusmccollim.dev</a>
+        <h2 class="section-title">Contact</h2>
+        <a href="#" class="contact-email" onclick="event.preventDefault(); navigator.clipboard.writeText('dev@cyrusmccollim.com'); const el = this; el.textContent = 'Copied!'; setTimeout(() => el.textContent = 'dev@cyrusmccollim.com', 2000);">dev@cyrusmccollim.com</a>
       </section>
 
     </main>
